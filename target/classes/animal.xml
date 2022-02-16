@@ -24,7 +24,8 @@
 
             <aop:before method="aboutToSound"
                         pointcut-ref="selectSound" />
-
+            <aop:after method="aboutToPlay"
+                       pointcut-ref="selectSound"/>
             <aop:pointcut
                     expression="execution(void *.sound())"
                     id="selectSound" />
